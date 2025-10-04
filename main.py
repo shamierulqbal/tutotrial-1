@@ -1,4 +1,16 @@
 import streamlit as st
+import os 
+
+#Profile
+col1, col2 = st.columns([1, 3])
+
+with col1:
+    # Use local image (must be in same folder as app.py)
+    if os.path.exists("profile.png"):
+        st.image("profile.png", caption="YUSRI BIN RAZALI", width=180)
+    else:
+        st.warning("profile.jpg not found. Please place it in the same folder as this app.")
+
 
 st.title("MUHAMMAD SHAMIERUL IQBAL BIN MOHD SHAMSUDDIN")
 st.header("Contact Information")
